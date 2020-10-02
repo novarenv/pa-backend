@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type TrashImage {
+  imgId: String!
+  img: String!
+  lat: String!
+  long: String!
+  time: String!
+}
+
+type ImageData {
+  originalName: String!
+  fileName: String!
+}
+
+type MutationRes {
+  status: String!
+  message: String!
+  data: ImageData!
+}
+
+type Query {
+  trashImg: [TrashImage!]!
+}
+
+type Mutation {
+  addTrashImg(img: ImageInput!): MutationRes!
+}
+
+input ImageInput {
+  fieldname: String!
+  originalname: String!
+  encoding: String!
+  mimetype: String!
+  destination: String!
+  filename: String!
+  path: String!
+  size: Float!
+}
